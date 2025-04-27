@@ -7,21 +7,17 @@ const profile = {
   },
 
   changeUsername(newName) {
-    if (profile.username === this.username) {
-      profile.username = newName;
-    }
+    this.username = newName;
   },
 
   updatePlayTime(hours) {
-    if (profile.username === this.username) {
-      profile.playTime += hours;
-    }
+    this.playTime += hours;
   },
 };
 
 console.log(profile.getInfo());
 
-console.log(profile.changeUsername('Marco'));
+profile.changeUsername('Marco');
 console.log(profile.getInfo());
 
 profile.updatePlayTime(20);
